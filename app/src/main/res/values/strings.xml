@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TeCuido</string>
+    <string name="tvList">Elija la lista que desee visualizar o editar</string>
+    <string name="title_activity_medicacion">Medicación</string>
+    <string name="title_activity_farmacia">Farmacia</string>
+
 </resources>
