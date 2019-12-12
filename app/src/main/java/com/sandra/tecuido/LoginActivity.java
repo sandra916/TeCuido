@@ -65,4 +65,8 @@ public class LoginActivity extends AppCompatActivity {
             textError.setVisibility(View.VISIBLE);
         }
     }
+    public void altaUsuario(View view){
+        Intent intent = new Intent(this,RegistroActivity.class);
+        this.startActivity(intent);
+    }
 }
