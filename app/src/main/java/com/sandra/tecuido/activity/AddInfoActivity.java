@@ -1,4 +1,4 @@
-package com.sandra.tecuido;
+package com.sandra.tecuido.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,16 +6,20 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
-public class AddInfo extends AppCompatActivity {
+import com.sandra.tecuido.R;
+
+public class AddInfoActivity extends AppCompatActivity {
     private TextView tv1 ,tvnombre, tvMediamento,tvHora;
     private EditText etmedicamento, etDosis;
     private RadioGroup rgOpciones;
-
+    private Button guardarButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +32,20 @@ public class AddInfo extends AppCompatActivity {
         tvMediamento = findViewById(R.id.tvMedicamento);
         etmedicamento = findViewById(R.id.etmedicamento);
         rgOpciones = findViewById(R.id.rgOpciones);
+        guardarButton = findViewById(R.id.btGuardar);
+        initonclick();
     }
+
+    private void initonclick() {
+        guardarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Medicamento guardado",Toast.LENGTH_LONG).show();
+                onBackPressed();
+            }
+        });
+    }
+
     public void hora(View view){
         new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
             @Override
@@ -43,7 +60,7 @@ public class AddInfo extends AppCompatActivity {
 
     }
     public void volver(View view) {
-        Intent intent = new Intent(this, Medicacion.class);
+       // Intent intent = new Intent(this, Medicacion.class);
 
     }
 

@@ -1,4 +1,4 @@
-package com.sandra.tecuido;
+package com.sandra.tecuido.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.sandra.tecuido.R;
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText nombre, contraseña;
@@ -18,7 +20,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
     @Override
-
     protected void onCreate(Bundle savedInstanceBundle) {
         super.onCreate(savedInstanceBundle);
         setContentView(R.layout.login_activity);
@@ -52,6 +53,7 @@ public class LoginActivity extends AppCompatActivity {
     private void goToMainActivity() {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
+        finish();
     }
 
     public void showToast() {
@@ -59,14 +61,15 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void checkUserCredentials() {
-        if (nombre.getText().toString().equalsIgnoreCase("alejandro12") && contraseña.getText().toString().equalsIgnoreCase("12343")) {
+       /* if (nombre.getText().toString().equalsIgnoreCase("alejandro12") && contraseña.getText().toString().equalsIgnoreCase("12343")) {
            goToMainActivity();
         } else {
             textError.setVisibility(View.VISIBLE);
-        }
+        }*/
+       goToMainActivity();
     }
     public void altaUsuario(View view){
-        Intent intent = new Intent(this,RegistroActivity.class);
+        Intent intent = new Intent(this, RegistroActivity.class);
         this.startActivity(intent);
     }
 }

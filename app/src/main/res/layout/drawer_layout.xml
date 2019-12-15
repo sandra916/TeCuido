@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_view" />
+
+    <!-- esto es el contenedor del menu que esta creado en otra clase y se le pone el gravityStar
+    para que empieze desde fuera de la pantalla-->
+    <FrameLayout
+        android:id="@+id/menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:clickable="true"
+        android:focusable="true" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

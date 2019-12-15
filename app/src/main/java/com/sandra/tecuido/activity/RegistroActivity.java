@@ -1,4 +1,4 @@
-package com.sandra.tecuido;
+package com.sandra.tecuido.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.sandra.tecuido.R;
+
 public class RegistroActivity extends AppCompatActivity {
     private EditText etUsuario, etEdad,etPeso,etMedico,etCuras;
     private Spinner spinner;
@@ -14,7 +16,7 @@ public class RegistroActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro);
+        setContentView(R.layout.registro_activity);
 
         etUsuario = findViewById(R.id.etUsuario);
         etEdad = findViewById(R.id.etEdad);

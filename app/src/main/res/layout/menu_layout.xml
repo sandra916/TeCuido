@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_profile_user"
+        app:civ_border_color="#EEEEEE"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#FFFFFF"
+        app:civ_shadow_radius="10" />
+
+
+    <TextView
+        android:id="@+id/buttonProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_profile_user"
+        android:drawablePadding="24dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="24dp"
+        android:text="PERFIL"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/buttonMedicamentos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_medicacion"
+        android:drawablePadding="24dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="24dp"
+        android:text="MEDICAMENTOS"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/buttonFarmacias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_pharmacy"
+        android:drawablePadding="24dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="24dp"
+        android:text="FARMACIAS"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/buttonAseo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_aseo"
+        android:drawablePadding="24dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="24dp"
+        android:text="ASEO PERSONAL"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/buttonCitasMedicas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_dortora"
+        android:drawablePadding="24dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="24dp"
+        android:text="CITAS MEDICAS"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/buttonSalir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_exit"
+        android:drawablePadding="24dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="24dp"
+        android:text="SALIR"
+        android:textColor="#000000" />
+</LinearLayout>
