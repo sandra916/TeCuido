@@ -41,6 +41,7 @@ public class MedicamentosFragment extends Fragment {
 
     }
 
+
     private void initOnClick() {
         buttonAñadirMedicacion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,9 +57,10 @@ public class MedicamentosFragment extends Fragment {
 
     private ArrayList<Medicamento>getMedicamentoList(){
         ArrayList<Medicamento>listaMedicamento = new ArrayList<>();
-        //listaMedicamento.add(new Medicamento(""));
-
-
+        listaMedicamento.add(new Medicamento("Tramadol","20/12/22","cada 6 horas","100mg por pastilla","No se debe conducir"));
+        listaMedicamento.add(new Medicamento("Palexia","8/9/20","2 tomas al dia","150mg","Tomar con el estomago lleno"));
+        listaMedicamento.add(new Medicamento("Vitamina D3","13/5/22","Una toma al dia","1000mg","Pastilla efervescentes"));
+        listaMedicamento.add(new Medicamento("Omeprazol","22/2/23","1 Toma","20mg","Tomar en ayunas"));
 
         return  listaMedicamento;
     }
