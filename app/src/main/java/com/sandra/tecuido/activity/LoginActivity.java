@@ -61,11 +61,11 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void checkUserCredentials() {
-       /* if (nombre.getText().toString().equalsIgnoreCase("alejandro12") && contraseña.getText().toString().equalsIgnoreCase("12343")) {
+        if (nombre.getText().toString().equalsIgnoreCase("Sandra1") && contraseña.getText().toString().equalsIgnoreCase("12343")) {
            goToMainActivity();
         } else {
             textError.setVisibility(View.VISIBLE);
-        }*/
+        }
        goToMainActivity();
     }
     public void altaUsuario(View view){
