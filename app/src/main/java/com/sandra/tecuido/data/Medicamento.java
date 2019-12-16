@@ -3,7 +3,7 @@ package com.sandra.tecuido.data;
 public class Medicamento {
     private String name;
     private String expirationdate;
-    private int times;
+    private String times;
     private String dosis;
     private String observaciones;
 
@@ -11,7 +11,7 @@ public class Medicamento {
 
     }
 
-    public Medicamento(String name, String expirationdate, int times, String dosis, String observaciones) {
+    public Medicamento(String name, String expirationdate, String times, String dosis, String observaciones) {
         this.name = name;
         this.expirationdate = expirationdate;
         this.times = times;
@@ -35,11 +35,11 @@ public class Medicamento {
         this.expirationdate = expirationdate;
     }
 
-    public int getTimes() {
+    public String getTimes() {
         return times;
     }
 
-    public void setTimes(int times) {
+    public void setTimes(String times) {
         this.times = times;
     }
 

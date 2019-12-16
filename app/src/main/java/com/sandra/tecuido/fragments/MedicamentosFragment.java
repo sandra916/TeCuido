@@ -47,6 +47,7 @@ public class MedicamentosFragment extends Fragment {
 
     }
 
+
     private void initOnClick() {
         buttonAñadirMedicacion.setOnClickListener(new View.OnClickListener() {
             @Override
