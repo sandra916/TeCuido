@@ -3,7 +3,7 @@
     <string name="tvList">Elija la lista que desee visualizar o editar</string>
     <string name="title_activity_medicacion">Medicación</string>
     <string name="title_activity_farmacia">Farmacia</string>
-    <string name="rellenar">Rellene los campos necesarios ara usted</string>
+    <string name="rellenar">Rellene los campos necesarios para usted</string>
     <string name="tvmedicacion">Nombre del medicamento :</string>
     <string name="dosis">Dosis :</string>
     <string name="hora">Seleccione la hora a la cual tomarla</string>
