@@ -51,7 +51,7 @@ public class AddInfoActivity extends AppCompatActivity {
                 String name  = etmedicamento .getText().toString();
                 String dosis = etDosis.getText().toString();
                 String observaciones = etObservaciones.getText().toString();
-                Medicamento medicamento = new Medicamento(name, null, 0, dosis, observaciones);
+                Medicamento medicamento = new Medicamento(name, null, "", dosis, observaciones);
                boolean guardado =  medicamentoRepository.guardar(medicamento);
                 if (guardado == false) {
                     Toast.makeText(getApplicationContext(), "Error cargando datos", Toast.LENGTH_SHORT).show();

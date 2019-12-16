@@ -35,7 +35,7 @@ public class MedicamentoRepository {
         SQLiteDatabase readableDatabase = admin.getReadableDatabase();
         Cursor cursor = readableDatabase.rawQuery("select name, dosis, observations from medicamento", null);
         while (cursor.moveToNext()) {
-            Medicamento medicamento =  new Medicamento (cursor.getString(0), null, 0, cursor.getString(1),cursor.getString(2));
+            Medicamento medicamento =  new Medicamento (cursor.getString(0), null, "", cursor.getString(1),cursor.getString(2));
             listaMedicamentos.add(medicamento);
         }
         readableDatabase.close();
