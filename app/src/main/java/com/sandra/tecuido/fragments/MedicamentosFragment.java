@@ -17,14 +17,18 @@ import com.sandra.tecuido.R;
 import com.sandra.tecuido.activity.AddInfoActivity;
 import com.sandra.tecuido.adapter.MedicamentosAdapter;
 import com.sandra.tecuido.data.Medicamento;
+import com.sandra.tecuido.repository.MedicamentoRepository;
+import com.sandra.tecuido.repository.MedicamentosSQLHelper;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MedicamentosFragment extends Fragment {
 
     private FloatingActionButton buttonAñadirMedicacion;
     private RecyclerView recyclerView;
-    private MedicamentosAdapter medicamentosAdapter = new MedicamentosAdapter(getMedicamentoList());
+    private MedicamentosAdapter medicamentosAdapter;
+    private MedicamentoRepository medicamentoRepository;
 
     @Nullable
     @Override
@@ -37,6 +41,8 @@ public class MedicamentosFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         buttonAñadirMedicacion = view.findViewById(R.id.buttonAñadirMedicacion);
         recyclerView = view.findViewById(R.id.listaMedicamentos);
+        medicamentoRepository = new MedicamentoRepository(new MedicamentosSQLHelper(getContext(), "medicamentoRepository", null, 1));
+        medicamentosAdapter = new MedicamentosAdapter(getMedicamentoList());
         initOnClick();
 
     }
@@ -54,13 +60,9 @@ public class MedicamentosFragment extends Fragment {
         recyclerView.setAdapter(medicamentosAdapter);
     }
 
-    private ArrayList<Medicamento>getMedicamentoList(){
-        ArrayList<Medicamento>listaMedicamento = new ArrayList<>();
-        //listaMedicamento.add(new Medicamento(""));
-
-
-
-        return  listaMedicamento;
+    private List<Medicamento> getMedicamentoList(){
+        return medicamentoRepository.read();
     }
+
 }
 
