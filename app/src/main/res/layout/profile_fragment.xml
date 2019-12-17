@@ -11,7 +11,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_profile_user"
+        android:src="@mipmap/foto_perfil"
         app:civ_border_color="#EEEEEE"
         app:civ_border_width="4dp"
         app:civ_shadow="true"
