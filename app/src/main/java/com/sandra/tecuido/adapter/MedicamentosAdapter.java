@@ -12,11 +12,12 @@ import com.sandra.tecuido.R;
 import com.sandra.tecuido.data.Medicamento;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MedicamentosAdapter extends RecyclerView.Adapter<MedicamentosAdapter.Holder> {
-    private ArrayList<Medicamento> listaMedicamentos;
+    private List<Medicamento> listaMedicamentos;
 
-    public MedicamentosAdapter(ArrayList<Medicamento> listaMedicamentos) {
+    public MedicamentosAdapter(List<Medicamento> listaMedicamentos) {
         this.listaMedicamentos = listaMedicamentos;
     }
 
@@ -33,7 +34,7 @@ public class MedicamentosAdapter extends RecyclerView.Adapter<MedicamentosAdapte
         holder.nombre.setText(listaMedicamentos.get(position).getName());
         holder.fechacaducidad.setText(listaMedicamentos.get(position).getExpirationdate());
         holder.dosis.setText(listaMedicamentos.get(position).getDosis());
-        holder.veces.setText(listaMedicamentos.get(position).getTimes());
+        holder.veces.setText(String.valueOf(listaMedicamentos.get(position).getTimes()));
         holder.observaciones.setText(listaMedicamentos.get(position).getObservaciones());
 
     }

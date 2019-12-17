@@ -17,14 +17,18 @@ import com.sandra.tecuido.R;
 import com.sandra.tecuido.activity.AddInfoActivity;
 import com.sandra.tecuido.adapter.MedicamentosAdapter;
 import com.sandra.tecuido.data.Medicamento;
+import com.sandra.tecuido.repository.MedicamentoRepository;
+import com.sandra.tecuido.repository.MedicamentosSQLHelper;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MedicamentosFragment extends Fragment {
 
     private FloatingActionButton buttonAñadirMedicacion;
     private RecyclerView recyclerView;
-    private MedicamentosAdapter medicamentosAdapter = new MedicamentosAdapter(getMedicamentoList());
+    private MedicamentosAdapter medicamentosAdapter;
+    private MedicamentoRepository medicamentoRepository;
 
     @Nullable
     @Override
@@ -37,6 +41,8 @@ public class MedicamentosFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         buttonAñadirMedicacion = view.findViewById(R.id.buttonAñadirMedicacion);
         recyclerView = view.findViewById(R.id.listaMedicamentos);
+        medicamentoRepository = new MedicamentoRepository(new MedicamentosSQLHelper(getContext(), "medicamentoRepository", null, 1));
+        medicamentosAdapter = new MedicamentosAdapter(getMedicamentoList());
         initOnClick();
 
     }
@@ -55,14 +61,9 @@ public class MedicamentosFragment extends Fragment {
         recyclerView.setAdapter(medicamentosAdapter);
     }
 
-    private ArrayList<Medicamento>getMedicamentoList(){
-        ArrayList<Medicamento>listaMedicamento = new ArrayList<>();
-        listaMedicamento.add(new Medicamento("Tramadol","20/12/22","cada 6 horas","100mg por pastilla","No se debe conducir"));
-        listaMedicamento.add(new Medicamento("Palexia","8/9/20","2 tomas al dia","150mg","Tomar con el estomago lleno"));
-        listaMedicamento.add(new Medicamento("Vitamina D3","13/5/22","Una toma al dia","1000mg","Pastilla efervescentes"));
-        listaMedicamento.add(new Medicamento("Omeprazol","22/2/23","1 Toma","20mg","Tomar en ayunas"));
-
-        return  listaMedicamento;
+    private List<Medicamento> getMedicamentoList(){
+        return medicamentoRepository.read();
     }
+
 }
 
