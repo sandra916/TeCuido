@@ -35,6 +35,7 @@ public class CurasAdapter extends RecyclerView.Adapter<CurasAdapter.Holder> {
     }
 
     @Override
+
     public int getItemCount() {
         return listaCuras.size();
     }
